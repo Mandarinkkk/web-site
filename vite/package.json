@@ -1,0 +1,24 @@
+{
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/node": "^22.10.7",
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.9",
+    "prisma": "^6.2.1",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.2.1",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.7",
+    "ml-kmeans": "^6.0.0"
+  },
+  "name": "vite-project",
+  "version": "1.0.0",
+  "scripts": {
+    "start:backend": "echo 'No backend server for now'",
+    "dev": "nodemon backend/server.ts",
+    "start:frontend": "cd frontend && vite",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\""
+  }
+}

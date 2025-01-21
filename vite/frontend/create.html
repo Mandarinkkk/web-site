@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пикселизация</title>
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+  <body>
+    <button id="main-btn">На Главную</button>
+
+    <h1>Сделай картинку пиксельной!</h1>
+    
+    <div style="margin-top: 5px;">
+        <span>Степень пикселизации: </span>
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="0"
+          step="1"
+          class="pixelation"
+          id="pixelationRange"
+        />
+    </div>
+
+    <h2>Загрузи свою картинку</h2>
+    <input id="upload" type="file" accept="image/*" />
+    
+    <div>
+      <img
+        style="margin-top: 5px;"
+        id="pixelatedImage"
+        crossorigin="anonymous"
+      />
+    </div>
+    
+    <!-- Кнопки отмены и повтора -->
+    <div>
+      <button id="undoBtn">Отменить</button>
+      <button id="redoBtn">Повторить</button>
+    </div>
+
+    <script type="module" src="src/create.ts"></script>
+    <script src="src/pixel_art_algorithm.ts"></script>
+  </body>
+</html>
